@@ -5,5 +5,4 @@ jobs:
   ip-get-super-super:
     runs-on: ubuntu-latest
     steps:
-      - run: ip a
-      - run: ls /
+      - run: ls

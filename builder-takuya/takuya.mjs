@@ -14,6 +14,7 @@ function OutPut(HTML){
     // 書き込み
     fs.writeFile(newfileNM, String(HTML));
 
+    console.log(HTML);
     console.log(newfileNM);
 
 }

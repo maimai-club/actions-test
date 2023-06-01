@@ -11,7 +11,7 @@ async function OutPut(HTML){
     var newfileNM = filePath.split('.').slice(0, -1).join('.html');
     
     // 書き込み
-    await fs.writeFile(newfileNM, HTML);
+    await fs.writeFile(newfileNM, String(HTML));
 
     console.log("takuya!");
 

@@ -21,21 +21,24 @@ function OutPut(HTML){
 
 //MDをHTMLに変換
 function MDtoHTML(){
-    return fs.readFile(filePath, { encoding: "utf8" }).then(file => {
+    var html
+    fs.readFile(filePath, { encoding: "utf8" }).then(file => {
         // gfmオプションを無効にする
-        const html = marked.parse(file, {
+        html = marked.parse(file, {
             gfm: true
         });
         console.log(typeof(html));
-        return html;
         //console.log(html);
     
     }).catch(err => {
         console.error(err.message);
         process.exit(1);
     });
+    return html;
 }
 
 //DO
-OutPut(MDtoHTML());
+var html = MDtoHTML();
+console.log(html);
+OutPut(html);
 //MDtoHTML();

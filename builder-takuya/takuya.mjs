@@ -13,7 +13,7 @@ async function OutPut(HTML){
     // 書き込み
     await fs.writeFile(newfileNM, String(HTML));
 
-    console.log("takuya!");
+    console.log(newfileNM);
 
 }
 

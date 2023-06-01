@@ -12,5 +12,6 @@ jobs:
       - run : npm install marked@4.0
       - run : npm install commander@9.0
       - run : node builder-takuya/takuya.mjs src/first.md
+      - run : cat src/first.html
       #- run: ls /home/runner/work/actions-test/actions-test/
       #- run: python3 test/unko.py

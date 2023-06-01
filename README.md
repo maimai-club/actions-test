@@ -1,2 +1,2 @@
 # 絶対厳守事項
-<span style="color: yellow; ">黄色基調</span>
+$`\textcolor{#ffff00}{\text{黄色}}`$

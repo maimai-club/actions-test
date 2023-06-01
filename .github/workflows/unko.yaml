@@ -5,4 +5,5 @@ jobs:
   ip-get-super-super:
     runs-on: ubuntu-latest
     steps:
-      - run: ls
+      - name: test
+        run: python3 ./test/unko.py

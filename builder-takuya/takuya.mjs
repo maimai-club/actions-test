@@ -1,5 +1,5 @@
 import { program } from "commander";
-import * as fs from "node:fs/promiss";
+import * as fs from "node:fs/promises";
 import { marked } from "marked";
 
 program.parse(process.argv);

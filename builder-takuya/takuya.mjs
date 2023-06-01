@@ -28,6 +28,7 @@ function MDtoHTML(){
             gfm: true
         });
         console.log(typeof(html));
+        OutPut(html);
         //console.log(html);
     
     }).catch(err => {
@@ -40,7 +41,7 @@ function MDtoHTML(){
 }
 
 //DO
-var html = MDtoHTML();
+MDtoHTML();
 //console.log(html);
-OutPut(html);
+//OutPut(html);
 //MDtoHTML();

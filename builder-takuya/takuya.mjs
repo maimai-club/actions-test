@@ -22,9 +22,10 @@ function OutPut(HTML){
 function MDtoHTML(){
     fs.readFile(filePath, { encoding: "utf8" }).then(file => {
         // gfmオプションを無効にする
-        const html = marked(file, {
+        const html = marked.parse(file, {
             gfm: true
         });
+        console.log(html);
         return html;
         //console.log(html);
     
@@ -35,4 +36,5 @@ function MDtoHTML(){
 }
 
 //DO
-OutPut(MDtoHTML());
+//OutPut(MDtoHTML());
+MDtoHTML();

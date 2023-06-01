@@ -9,8 +9,6 @@ const filePath = program.args[0];
 function OutPut(HTML){
     //ファイル拡張子をHTMLに変換
     var newfileNM = filePath.split('.').slice(0, -1).join('.html');
-
-    var fs = require("fs");
     
     // 書き込み
     fs.writeFile(newfileNM, HTML, (err) => {

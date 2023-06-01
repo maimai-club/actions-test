@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #checkout必須
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       #node.jsをセットアップする
       - uses: actions/setup-node@v3
       - run : npm install marked@4.0

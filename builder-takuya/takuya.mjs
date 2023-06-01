@@ -22,7 +22,7 @@ function OutPut(HTML){
 function MDtoHTML(){
     fs.readFile(filePath, { encoding: "utf8" }).then(file => {
         // gfmオプションを無効にする
-        const html = marked.parse(file, {
+        const html = marked(file, {
             gfm: true
         });
         return html;

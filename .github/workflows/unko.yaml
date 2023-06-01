@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: python3 ./test/unko.py
+        run: python3 test/unko.py

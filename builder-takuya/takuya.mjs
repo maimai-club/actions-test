@@ -11,7 +11,7 @@ function OutPut(HTML){
     var newfileNM = filePath.split('.').slice(0, -1).join('.html');
     
     // 書き込み
-    fs.writeFile(newfileNM, HTML, (err) => {
+    fs.writeFile(newfileNM, HTML[0], (err) => {
         if (err) throw err;
         console.log('正常に書き込みが完了しました');
     });
@@ -25,7 +25,7 @@ function MDtoHTML(){
         const html = marked.parse(file, {
             gfm: true
         });
-        console.log(html);
+        console.log(typeof(html));
         return html;
         //console.log(html);
     

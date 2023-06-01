@@ -1,6 +1,8 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+steps:
+  - uses: actions/checkout@v3
 jobs:
   ip-get-super-super:
     runs-on: ubuntu-latest

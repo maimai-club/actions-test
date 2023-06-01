@@ -10,14 +10,14 @@ function OutPut(HTML){
     //ファイル拡張子をHTMLに変換
     var newfileNM = filePath.split('.').slice(0, -1).join('.html');
 
-    var fs = WScript.CreateObject("Scripting.FileSystemObject");
-    var file = fs.OpenTextFile(newfileNM, 2,true,-1);
+    var fs = require("fs");
+    
+    // 書き込み
+    fs.writeFile(newfileNM, HTML, (err) => {
+        if (err) throw err;
+        console.log('正常に書き込みが完了しました');
+    });
 
-    file.Write(HTML);
-
-    //file.OutPut();
-
-    file.Close();
 }
 
 //MDをHTMLに変換

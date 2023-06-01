@@ -8,7 +8,8 @@ const filePath = program.args[0];
 //ファイルに出力
 async function OutPut(HTML){
     //ファイル拡張子をHTMLに変換
-    var newfileNM = filePath.split('.').slice(0, -1).join(".html");
+    var newfileNM = filePath.split('.').slice(0, -1);
+    newfileNM = newfileNM + '.html';
     
     // 書き込み
     await fs.writeFile(newfileNM, String(HTML));

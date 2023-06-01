@@ -24,7 +24,7 @@ function MDtoHTML(){
     fs.readFile(filePath, { encoding: "utf8" }).then(file => {
         // gfmオプションを無効にする
         const html = marked.parse(file, {
-            gfm: false
+            gfm: true
         });
         return html;
         //console.log(html);

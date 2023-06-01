@@ -14,14 +14,14 @@ function OutPut(HTML){
     // 書き込み
     fs.writeFile(newfileNM, String(HTML));
 
-    console.log(HTML);
-    console.log(newfileNM);
+    //console.log(HTML);
+    //console.log(newfileNM);
 
 }
 
 //MDをHTMLに変換
 function MDtoHTML(){
-    var html
+    var html;
     fs.readFile(filePath, { encoding: "utf8" }).then(file => {
         // gfmオプションを無効にする
         html = marked.parse(file, {
@@ -34,11 +34,13 @@ function MDtoHTML(){
         console.error(err.message);
         process.exit(1);
     });
+
+    console.log(html);
     return html;
 }
 
 //DO
 var html = MDtoHTML();
-console.log(html);
+//console.log(html);
 OutPut(html);
 //MDtoHTML();

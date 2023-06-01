@@ -8,7 +8,7 @@ const filePath = program.args[0];
 //ファイルに出力
 function OutPut(HTML){
     //ファイル拡張子をHTMLに変換
-    var newfileNM = new filePath.split('.').slice(0, -1).join('.html');
+    var newfileNM = filePath.split('.').slice(0, -1).join('.html');
 
     var file = fs.OpenTextFile(newfileNM, 2,true,-1);
 

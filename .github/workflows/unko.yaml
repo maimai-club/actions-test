@@ -13,8 +13,11 @@ jobs:
       - uses: actions/setup-node@v3
       - run : npm install marked@4.0
       - run : npm install commander@9.0
-      - run : node builder-takuya/takuya.mjs src/first.md
-      - run : cat src/first.html
+      #- run : node builder-takuya/takuya.mjs src/first.md
+      #- run : cat src/first.html
+      - run : npm install
+      - run : npm run dev
+      - run : npm run build
       - run : |
           git config user.name  "rui-puipui"
           git config user.email "rui.o3i.1106@gmail.com"
